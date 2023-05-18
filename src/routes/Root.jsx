@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
-import DefaultNavigation from "../components/DefaultNavigation";
 import Footer from "../components/Footer";
-//import ConnectedNavigation from "../components/ConnectedNavigation";
+import Navigation from "../components/Navigation";
 
 
 /**
@@ -12,8 +11,7 @@ import Footer from "../components/Footer";
 export default function Root(){
   return(
     <div>
-      <DefaultNavigation />
-      {/* <ConnectedNavigation /> prop à ajouter: userName={user.firstname} (ou truc du genre) */}
+      <Navigation />
       <div>
         <Outlet />
       </div>
