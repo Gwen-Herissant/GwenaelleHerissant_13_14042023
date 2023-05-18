@@ -9,6 +9,8 @@ import Homepage from "./pages/Homepage";
 import SignIn from "./pages/Sign-In";
 import User from "./pages/User";
 //import ErrorPage from "./pages/ErrorPage";
+import { Provider } from 'react-redux';
+import store from './utils/store';
 import reportWebVitals from './reportWebVitals';
 
 
@@ -31,7 +33,7 @@ const router = createBrowserRouter([
         element: <SignIn />,
       },
       {
-        path: '/profile/:id',
+        path: '/profile',
         element: <User/>,
       }
     ],
@@ -41,9 +43,12 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <Provider store={store}>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  </Provider>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
