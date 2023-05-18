@@ -9,8 +9,8 @@ export default function Homepage(){
   return(
     <main>
       <Hero />
-      <section class="features">
-        <h2 class="sr-only">Features</h2>
+      <section className="features">
+        <h2 className="sr-only">Features</h2>
         <FeatureItem
           image={IconChat}
           alt="Chat Icon" 

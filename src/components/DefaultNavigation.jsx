@@ -4,21 +4,21 @@ import argentBankLogo from "../assets/images/argentBankLogo.png";
 
 export default function DefaultNavigation(){
   return(
-    <nav class="main-nav">
-      {/* <a class="main-nav-logo" href="/"> */}
+    <nav className="main-nav">
+      {/* <a className="main-nav-logo" href="/"> */}
       <Link to={`/`} className="main-nav-logo" >
         <img
-          class="main-nav-logo-image"
+          className="main-nav-logo-image"
           src={argentBankLogo}
           alt="Argent Bank Logo"
         />
-        <h1 class="sr-only">Argent Bank</h1>
+        <h1 className="sr-only">Argent Bank</h1>
       </Link>
       {/* </a> */}
       <div>
-        {/* <a class="main-nav-item" href="/login"> */}
+        {/* <a className="main-nav-item" href="/login"> */}
         <Link to={`/login`} className="main-nav-item" >
-          <i class="fa fa-user-circle"></i>
+          <i className="fa fa-user-circle"></i>
           Sign In
         </Link>
         {/* </a> */}
