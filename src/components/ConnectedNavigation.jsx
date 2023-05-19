@@ -3,6 +3,8 @@ import "../styles/main.css";
 import argentBankLogo from "../assets/images/argentBankLogo.png";
 import { useDispatch } from "react-redux";
 import { logout } from "../features/loginData";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRightFromBracket, faCircleUser } from '@fortawesome/free-solid-svg-icons';
 
 export default function ConnectedNavigation({firstName}){
 
@@ -24,11 +26,11 @@ export default function ConnectedNavigation({firstName}){
       </Link>
       <div>
         <Link to={`/profile`} className="main-nav-item" >
-          <i className="fa fa-circle-user"></i>
+          <FontAwesomeIcon icon={faCircleUser} />
           {firstName}
         </Link>
         <Link to={`/`} className="main-nav-item" onClick={handleLogout} >
-          <i className="fa fa-sign-out"></i>
+          <FontAwesomeIcon icon={faRightFromBracket} />
           Sign Out
         </Link>
       </div>

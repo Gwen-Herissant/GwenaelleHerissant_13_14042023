@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "../styles/main.css";
 import argentBankLogo from "../assets/images/argentBankLogo.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleUser } from '@fortawesome/free-solid-svg-icons';
 
 export default function DefaultNavigation(){
   return(
@@ -15,7 +17,7 @@ export default function DefaultNavigation(){
       </Link>
       <div>
         <Link to={`/login`} className="main-nav-item" >
-          <i className="fa fa-user-circle"></i>
+          <FontAwesomeIcon icon={faCircleUser} />
           Sign In
         </Link>
       </div>
