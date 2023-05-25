@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectLogin, selectProfileData } from "../utils/selectors";
 import { useEffect, useState } from "react";
 import { fetchProfile } from "../features/profileData";
+import UpdateDataForm from "../components/UpdateDataForm";
 
 export default function User(){
 
@@ -41,6 +42,7 @@ export default function User(){
       accountAmount="$184.30"
       accountDescription="Current Balance"
       />
+      <UpdateDataForm />
     </main>
   );
 }
