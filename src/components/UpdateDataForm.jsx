@@ -1,47 +1,29 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "../styles/main.css";
-import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { login} from "../features/loginData";
+import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { selectProfileData } from "../utils/selectors";
+import { updateData } from "../features/updateData";
 
 export default function UpdateDataForm(){
 
-  // const [username, setUsername] = useState('');
-  // const [password, setPassword] = useState('');
+  const profileData = useSelector(selectProfileData);
+  const dispatch = useDispatch();
+  const [firstname, setFirstName] = useState(profileData.data?.firstName || '');
+  const [lastname, setLastName] = useState(profileData.data?.lastName || '');
 
-  // const storedUsername = localStorage.getItem('username');
-  // const [rememberMe, setRememberMe] = useState(Boolean(storedUsername));
-
-  // const dispatch = useDispatch()
-
-  // const navigate = useNavigate();
-
-  // const handleClick = (e) => {
-  //   e.preventDefault();
-  //   console.log(username, password)
-  //   dispatch(login({ username, password }))
-  //     .then((result) => {
-  //       navigate('/profile');
-  //     });
-    
-  //   if (rememberMe) {
-  //     localStorage.setItem('username', username);
-  //   } else {
-  //     localStorage.removeItem('username');
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   setUsername(storedUsername || '');
-  //   setRememberMe(Boolean(storedUsername));
-  // }, [storedUsername]);
+  const handleUpdate = (e) => {
+    e.preventDefault();
+    dispatch(updateData({ firstname, lastname }))
+    .then((result) => {
+      closeModal();
+    })
+  };
 
   let modal = document.querySelector('.modal');
 
-  const closeModal = (e) => {
-    e.preventDefault();
+  const closeModal = () => {
     modal.classList.remove('modal--open');
   }
 
@@ -55,13 +37,13 @@ export default function UpdateDataForm(){
         <form>
           <div className="input-wrapper">
             <label htmlFor="firstname">Name</label>
-            <input type="text" id="firstname" />
+            <input type="text" id="firstname" value={firstname} onChange={(e) => setFirstName(e.target.value)} />
           </div>
           <div className="input-wrapper">
             <label htmlFor="lastname">Last Name</label>
-            <input type="text" id="lastname" />
+            <input type="text" id="lastname" value={lastname} onChange={(e) => setLastName(e.target.value)} />
           </div>
-          <button className="save-button" type="button" onClick="">Save</button>
+          <button className="save-button" type="button" onClick={handleUpdate}>Save</button>
         </form>
       </div>
     </div>

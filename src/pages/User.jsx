@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Account from "../components/Account";
 import { useDispatch, useSelector } from "react-redux";
 import { selectLogin, selectProfileData } from "../utils/selectors";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { fetchProfile } from "../features/profileData";
 import UpdateDataForm from "../components/UpdateDataForm";
 
