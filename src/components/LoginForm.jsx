@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { login} from "../features/loginData";
 
-export default function Form(){
+export default function LoginForm(){
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
