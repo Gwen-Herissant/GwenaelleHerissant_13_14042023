@@ -6,22 +6,26 @@ import { selectLogin, selectProfileData } from "../utils/selectors";
 import { useEffect } from "react";
 import { fetchProfile } from "../features/profileData";
 import UpdateDataForm from "../components/UpdateDataForm";
+import { useNavigate } from "react-router-dom";
+import { logout } from "../features/loginData";
 
 export default function User(){
 
   const token = useSelector(selectLogin);
 
   const profileData = useSelector(selectProfileData);
-  if(profileData.status === "succeeded") {
-    console.log(profileData);
-  }
 
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   useEffect(() => {
       dispatch(fetchProfile(token))
-  }, [dispatch, token]);
-
-
+      .unwrap()
+      .catch((error) => {
+        console.log(error);
+        navigate('/error-page');
+        dispatch(logout());
+      });
+  }, [dispatch, token, navigate]);
   
   return(
     <main className="main bg-dark">
