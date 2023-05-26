@@ -21,7 +21,6 @@ export default function User(){
       dispatch(fetchProfile(token))
       .unwrap()
       .catch((error) => {
-        console.log(error);
         navigate('/error-page');
         dispatch(logout());
       });
