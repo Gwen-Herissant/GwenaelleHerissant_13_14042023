@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { selectProfileData } from "../utils/selectors";
 import { updateData } from "../features/updateData";
+import { fetchProfile } from "../features/profileData";
 
 export default function UpdateDataForm(){
 
@@ -17,6 +18,7 @@ export default function UpdateDataForm(){
     e.preventDefault();
     dispatch(updateData({ firstname, lastname }))
     .then((result) => {
+      dispatch(fetchProfile());
       closeModal();
     })
   };
