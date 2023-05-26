@@ -12,8 +12,12 @@ export const fetchProfile = createAsyncThunk(
         "Authorization": `Bearer ${token}`
       }
     });
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch profile');
+    }
+
     const data = await response.json();
-    //console.log(data);
     return data;
   }
 )

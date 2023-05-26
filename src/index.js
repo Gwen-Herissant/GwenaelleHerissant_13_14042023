@@ -8,7 +8,7 @@ import Root from "./routes/Root";
 import Homepage from "./pages/Homepage";
 import SignIn from "./pages/Sign-In";
 import User from "./pages/User";
-//import ErrorPage from "./pages/ErrorPage";
+import ErrorPage from "./pages/ErrorPage";
 import { Provider } from 'react-redux';
 import store from './utils/store';
 import reportWebVitals from './reportWebVitals';
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
-    //errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -35,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: '/profile',
         element: <User/>,
+      },
+      {
+        path: '/error-page',
+        element: <ErrorPage />
       }
     ],
   },

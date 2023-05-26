@@ -341,3 +341,19 @@ body {
     width: 200px;
   }
 }
+
+.error-page {
+  padding: 5rem 0;
+}
+
+.error-page h1 {
+}
+
+.error-page_link {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.error-page_link:hover {
+  text-decoration: underline;
+}
