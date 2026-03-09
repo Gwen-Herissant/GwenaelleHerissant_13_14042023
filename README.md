@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Argent Bank — Banking App (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack banking web application built with React and Redux, featuring API authentication and state management, as part of a front-end development training program.
 
-## Available Scripts
+> This is the **frontend** repository. It must be run alongside the [backend repository](https://github.com/OpenClassrooms-Student-Center/Project-10-Bank-API).
 
-In the project directory, you can run:
+## Project Overview
 
-### `npm start`
+This project was completed as part of a structured front-end development curriculum. The goal was to build the frontend of a banking application and connect it to an existing REST API, handling authentication and user data management.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Beyond the implementation, the project also involved **designing and documenting new API endpoints** for a transactions feature using Swagger — modeling the routes and data interactions before any code was written.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Objectives
 
-### `npm test`
+- Build a responsive banking dashboard with React
+- Implement authentication (login, token handling, logout) via REST API calls
+- Manage global application state with Redux
+- Model and document new API endpoints with Swagger
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![Redux](https://img.shields.io/badge/Redux-764ABC?style=flat&logo=redux&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=flat&logo=swagger&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Key Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Authentication flow** — login, session persistence with JWT token, and logout
+- **User dashboard** — display and edit user profile data fetched from the API
+- **Redux state management** — global state for user session and data
+- **Swagger API design** — proposed and documented endpoints for the transactions feature
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## What I Learned
 
-### `npm run eject`
+- Integrating a React frontend with a REST API
+- Implementing authentication with JWT tokens
+- Managing global state with Redux (actions, reducers, store)
+- Modeling and documenting API endpoints with Swagger
+- Thinking about both frontend implementation and API design together
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Context
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project is part of the **OpenClassrooms Front-End Developer** curriculum. It introduced Redux for state management and covered the full cycle of API integration — from authentication to designing new endpoints.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Getting Started
 
-## Learn More
+### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Node.js v12
+- The [backend repository](https://github.com/OpenClassrooms-Student-Center/Project-10-Bank-API) must be running first
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installation
 
-### Code Splitting
+Clone the repository and install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm install
+```
 
-### Analyzing the Bundle Size
+Start the app:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm start
+```
 
-### Making a Progressive Web App
+The app is available at: `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Build for production:
 
-### Advanced Configuration
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Test Accounts
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Name | Email | Password |
+|---|---|---|
+| Tony Stark | tony@stark.com | password123 |
+| Steve Rogers | steve@rogers.com | password456 |
